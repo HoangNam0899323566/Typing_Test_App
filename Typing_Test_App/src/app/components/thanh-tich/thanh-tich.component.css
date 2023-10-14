@@ -1,0 +1,17 @@
+.title{
+  margin-top: 5vh;
+  width: 80%;
+  margin-left: 10%;
+  font-size: 3vh;
+  display: flex;
+  font-weight: bold;
+  justify-content: center;
+}
+
+@media screen  and (max-width:1200px){
+
+  .title{
+    font-size: 1.75vh;
+  }
+
+}

@@ -1,0 +1,56 @@
+.content{
+  width: 90%;
+  margin-top: 3vh;
+  margin-left: 5%;
+  display: flex;
+  height: 22vh;
+  display: flex;
+  align-items: center;
+}
+
+.content p{
+  width: 85%;
+}
+.content a{
+  width: 10%;
+  height: 5vh;
+  font-size: 3vh;
+  margin-left: 5%;
+  background-color: rgba(30, 144, 255, 1);
+  border: none;
+  border-radius: 10vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  color: white;
+}
+
+.content a:hover{
+  color: black;
+}
+
+.line{
+  border: 1px solid;
+  width: 90%;
+  margin-left: 5%;
+  margin-top: 2vh;
+  border: 1px solid rgba(128, 128, 128, .8);
+}
+
+
+@media screen and (max-width: 1200px){
+
+  .content p{
+    font-size: 1.8vh;
+  }
+  .content{
+    height: 22vh;
+  }
+
+  .content a{
+    font-size: 2vh;
+    height: 4vh;
+  }
+
+}

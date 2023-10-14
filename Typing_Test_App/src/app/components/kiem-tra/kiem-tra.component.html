@@ -1,0 +1,11 @@
+<div class="body">
+  <app-header></app-header>
+  <div class="kiem-tra">
+    <li *ngFor="let item of testExams; let i = index">
+      <div class="content">
+        <p>{{item}}</p>
+        <a (click)="navigateToCheck(i)">Kiểm tra</a>
+      </div>
+      <div class="line"></div>
+    </li>
+</div>

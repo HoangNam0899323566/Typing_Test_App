@@ -1,0 +1,30 @@
+<!-- <div>
+    <button nz-button nzType="primary" (click)="openResultModal()">Hiển thị Kết quả</button>
+  </div>
+  <div class="overlay" [ngStyle]="overlayStyles" *ngIf="showModal">
+    <div class="modal">
+      <h2>Kết quả</h2>
+      <p>Số điểm: {{ score }}</p>
+      <p>Tên: {{ name }}</p>
+      <button (click)="onCancel()">Hủy bỏ</button>
+      <button (click)="onNext()">Tiếp theo</button>
+    </div>
+  </div> -->
+
+<h1 mat-dialog-title>{{inputData.title}}</h1>
+<div mat-dialog-content>
+  <ng-container *ngIf="inputData.cheat != undefined; else elseTemplate">
+    <p>Invalid Exams!</p>
+  </ng-container>
+  <ng-template #elseTemplate>
+    <p>Thời gian làm bài: {{inputData.time}}</p>
+    <p>Số điểm: {{ inputData.score }}</p>
+    <p>Tốc độ đánh: {{ inputData.speed }}</p>
+    <p>Độ chính xác: {{inputData.accuracy}}</p>
+  </ng-template>
+  
+</div>
+<div mat-dialog-actions>
+  <button mat-raised-button (click)="closePopup()">Hủy</button>
+  <button mat-raised-button [mat-dialog-close]="cloudMessage">Tiếp theo</button>
+</div>

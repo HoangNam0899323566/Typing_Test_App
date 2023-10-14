@@ -1,0 +1,22 @@
+<div class="body">
+  <app-header></app-header>
+  <div class="practices">
+    <li *ngFor="let item of practices; let i = index">
+      <div class="content">
+        <p>{{item}}</p>
+        <a (click)="navigateToTest(i)">Bắt đầu</a>
+      </div>
+      <div class="line"></div>
+    </li>
+    <!-- <div class="content">
+      <p>{{practices[1]}}</p>
+      <a href="luyen-tap">Bắt đầu</a>
+    </div>
+    <div class="line"></div>
+    <div class="content">
+      <p>{{practices[2]}}</p>
+      <a href="luyen-tap">Bắt đầu</a>
+    </div>
+    <div class="line"></div> -->
+  </div>
+</div>

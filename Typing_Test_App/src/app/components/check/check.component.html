@@ -1,0 +1,32 @@
+<div class="body">
+  <app-header></app-header>
+  <div class="luyen-tap">
+    <div class="content-1">
+      <div class="time">
+        <i class="fa-regular fa-hourglass-half" style="color: #000000;"></i>
+        <p>{{currentTime}}</p>
+      </div>
+      <button>
+        <i class="fa-solid fa-arrow-rotate-right fa-flip-horizontal" style="color: #fff;" (click)="refreshTimmer()"></i>
+      </button>
+      <button>
+        <ng-container *ngIf="!pause; else pauseTemplate">
+          <i class="fa-solid fa-play" style="color: #ffffff;" (click)="clock()"></i>
+        </ng-container>
+        <ng-template #pauseTemplate>
+          <i class="fa-solid fa-pause" style="color: #ffffff;" (click)="clock()"></i>
+        </ng-template>
+      </button>
+    </div>
+    <div class="content-3">
+      <textarea cols="150" rows="10" disabled>{{exams[examsId]}}</textarea>
+    </div>
+    <div class="content-3">
+      <textarea cols="150" rows="10" placeholder="Nhập văn bản..." [disabled]="pause ? false : true" [(ngModel)]="exercise"></textarea>
+    </div>
+    <div class="content-4">
+      <button mat-riased-button (click)="openPopup()">Kết thúc</button>
+      <button (click)="nextExams()">Tiếp theo</button>
+    </div>
+  </div>
+</div>

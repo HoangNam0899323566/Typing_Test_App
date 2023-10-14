@@ -1,0 +1,15 @@
+<div class="body">
+  <div class="logo">
+    <img src="../../../assets/imgs/logo.png" alt="logo-app">
+  </div>
+  <div class="login">
+    <div>
+      <input type="text" placeholder="Tên sinh viên" [(ngModel)]="name">
+    </div>
+    <div>
+      <input type="text" placeholder="MSSV" [(ngModel)]="mssv"></div>
+  </div>
+  <div class="btn-login">
+    <a (click)="login()">Đăng nhập</a>
+  </div>
+</div>
